@@ -14,7 +14,7 @@ class UserViews(generics.CreateAPIView):
         serializer = UserSerializer(Users, many=True)
         return Response(serializer.data)
     def post(self, request, format=None):
-        breakpoint()
+        # breakpoint()
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
